@@ -1,0 +1,20 @@
+<data>
+  <items>
+    <item name = "item1"> item1abc </item>
+    <item name = "item2"> item2abc </item> 
+    <item name = "item3"> item3abc </item>
+  </items>
+  <games>
+    <game cat = "aventura" calificacion="10"> Minecraft</game>
+    <game cat = "disparos"> COD </game>
+    <game cat = "terror"> Slenderman </game>
+    <game cat = "disparos"> Fri fayer </game>
+    <game cat = "deportes"> Fifa </game>
+  </games>
+  <food>
+    <product name = "prod1"> producto1 </product>
+    <product name = "prod2"> producto2 </product>
+    <product name = "prod3"> producto3 </product>
+    <product name = "prod4"> producto4 </product>
+  </food>
+</data>

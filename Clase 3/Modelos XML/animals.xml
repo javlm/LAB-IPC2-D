@@ -1,0 +1,16 @@
+<zoologico>
+  <mamiferos> MAMIFEROS
+    <animal recinto="si" familia="Felinos"> Tigre </animal>
+    <animal recinto="no"> Leon </animal>
+    <animal recinto="si"> Oso </animal>
+    <animal recinto="no"> Pantera </animal>
+  </mamiferos>
+  <reptiles tipo="serpientes">
+    <animal recinto="si" venenoso="no"> Boa </animal>
+    <animal recinto="si" venenoso="no"> Anaconda </animal>
+  </reptiles>
+  <reptiles tipo="lagarto">
+    <animal recinto="si" venenoso="no"> Heloderma </animal>
+    <animal recinto="si" venenoso="no"> Lagarto </animal>
+  </reptiles>
+</zoologico>
