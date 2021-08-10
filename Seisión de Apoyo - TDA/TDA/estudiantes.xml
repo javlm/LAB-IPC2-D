@@ -1,0 +1,52 @@
+<estudiantes>
+    <estudiante nombre="Javier Estuardo Lima Abrego" carnet="201612098">
+        <cursos>
+            <curso codigo="0787" nombre="Sistemas Organizacionales y Gerenciales 2"> 4
+            </curso>
+            <curso codigo="0729" nombre="Modelacion y Simulacion 1"> 5
+            </curso>
+            <curso codigo="0785" nombre="Analisis y Diseño de Sistemas 2"> 5
+            </curso>
+        </cursos>
+    </estudiante>
+    <estudiante nombre="Pablo Alejandro Zetino Paez" carnet="202004750">
+        <cursos>
+            <curso codigo="0771" nombre="Introduccion a la Prog. y Comp. 2"> 5
+            </curso>
+            <curso codigo="0769" nombre="Lenguajes Formales y Programacion"> 3
+            </curso>
+            <curso codigo="0011" nombre="Idioma Tecnico 4"> 2
+            </curso>
+        </cursos>
+    </estudiante>
+    <estudiante nombre="Fernando Alfredo Aguirre Suárez" carnet="201944748">
+        <cursos>
+            <curso codigo="0771" nombre="Introduccion a la Prog. y Comp. 2"> 5
+            </curso>
+            <curso codigo="0114" nombre="Matematica Intermedia 3"> 5
+            </curso>
+            <curso codigo="0962" nombre="Matematica Computo 2"> 5
+            </curso>
+        </cursos>
+    </estudiante>
+    <estudiante nombre="Khristian Manolo Junior Garcia Pineda" carnet="201404202">
+        <cursos>
+            <curso codigo="0771" nombre="Introduccion a la Prog. y Comp. 2"> 5
+            </curso>
+            <curso codigo="0769" nombre="Lenguajes Formales y Programacion"> 3
+            </curso>
+            <curso codigo="0011" nombre="Idioma Tecnico 4"> 2
+            </curso>
+        </cursos>
+    </estudiante>
+    <estudiante nombre="Dilan Conaher Suy Miranda" carnet="201801194">
+        <cursos>
+            <curso codigo="0771" nombre="Introduccion a la Prog. y Comp. 2"> 5
+            </curso>
+            <curso codigo="0769" nombre="Lenguajes Formales y Programacion"> 3
+            </curso>
+            <curso codigo="0014" nombre="Economia"> 4
+            </curso>
+        </cursos>
+    </estudiante>
+</estudiantes>
