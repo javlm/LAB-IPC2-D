@@ -1,0 +1,9 @@
+digraph G {
+    style=filled;
+    color=lightgrey;
+    node [style=filled,color=white];
+   nodo1[caracteristicas] 
+nodo1[caracteristicas] 
+nodo1[caracteristicas] 
+
+}
