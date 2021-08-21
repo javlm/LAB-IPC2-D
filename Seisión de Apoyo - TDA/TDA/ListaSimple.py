@@ -39,7 +39,59 @@ class ListaSimple():
                     print('Estudiante', carnet,'eliminado.')
                     break
             tmp = tmp.siguiente
+            
+            
+    def BubbleSortStd(self):
+        comprobar = self.primero
+        aux = self.primero
+        if comprobar.siguiente != None and aux != None:
+            i = self.primero
+            while i != None:
+                j = i.siguiente
+                while j != None:
+                    if i.carnet > j.carnet:
+                        temporal = i.carnet
+                        i.carnet = j.carnet
+                        j.carnet = temporal
+                    j = j.siguiente
+                i = i.siguiente
 
+    def BubbleSort(self):
+        if self.size > 1:
+            while True:
+                actual = self.inicio
+                i = None  # anterior
+                j = self.inicio.siguiente  # siguiente
+                cambio = False
+                while j != None:
+                    if actual.carnet > j.carnet:
+                        cambio = True
+                        if i != None:
+                            tmp = j.siguiente
+                            i.siguiente = j
+                            j.siguiente = actual
+                            actual.siguiente = tmp
+                        else:
+                            tmp2 = j.siguiente
+                            self.inicio = j
+                            j.siguiente = actual
+                            actual.siguiente = tmp2
+                        i = j
+                        j = actual.siguiente
+                    else:
+                        i = actual
+                        actual = j
+                        j = j.siguiente
+                if not cambio:
+                    break
+
+
+    def QuickSort(self):
+        pass
+
+    def Insertion(self):
+        pass
+    
     def getEstudiante(self, carnet):
         tmp = self.inicio
         while tmp is not None:

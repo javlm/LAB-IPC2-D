@@ -16,7 +16,7 @@ def cargarArchivo(ruta, estudiantes):
 def menu():
     opcion = ''
     Lista_Estudiantes = ListaSimple()
-    while opcion != '7':
+    while opcion != '8':
         print('------------ Menu --------------')
         print('1. Ingresar estudiante')
         print('2. Ver estudiantes inscritos')
@@ -24,6 +24,7 @@ def menu():
         print('4. Asignar Curso')
         print('5. Ver cursos asignados de Estudiante')
         print('6. Cargar Archivo')
+        print('7. Ordenamientos')
         opcion = input('Ingrese una opción: ')
         print(opcion)
         if opcion == '1':
@@ -60,6 +61,14 @@ def menu():
             Filename = input('Ingrese nombre de archivo:')
             file = './' + Filename
             cargarArchivo(file, Lista_Estudiantes)
+        elif opcion == '7':
+            print('a. BubbleSort')
+            print('b. InsertionSort')
+            orden = input('Ingrese opcion:')
+            if orden == 'a':
+                Lista_Estudiantes.BubbleSort()
+            if orden == 'b':
+                Lista_Estudiantes.Insertion()
         else:
             break
 
