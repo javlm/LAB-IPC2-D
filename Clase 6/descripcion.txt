@@ -1,0 +1,19 @@
+
+
+Lista Terrenos -> Pos. Memoria 0x00000000000
+
+    terreno1 (3x3); (1,2), (3,3) 0x0000001312323
+        -> pos1,1; pos1,2; pos1,3; pos2,1; pos2,2 ... pos3,3  #ListaPosiciones
+
+
+    terreno2 (25,25)
+        -> pos1,1; pos1,2; pos1,3; pos2,1; pos2,2 ... pos25,25 #ListaPosiciones
+
+
+    terreno3 (100x100)
+        -> pos1,1; pos1,2; pos1,3; pos2,1; pos2,2 ... pos100,100 #ListaPosiciones
+
+    .
+    .
+    .
+    terrenoN
