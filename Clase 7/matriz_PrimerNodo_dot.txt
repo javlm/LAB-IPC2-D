@@ -1,0 +1,20 @@
+digraph G{
+    node[shape=box, width=0.7, height=0.7, fontname="Arial", fillcolor="white", style=filled]
+    edge[style = "bold"]
+    node[label = "capa:0" fillcolor="darkolivegreen1" pos = "-1,1!"]raiz;label = "
+MATRIZ DISPERSA" 
+fontname="Arial Black" 
+fontsize="25pt" 
+
+                    
+
+	node[label = "F10" fillcolor="azure3" pos="-1,-0!" shape=box]x10;
+	raiz->x10;
+	node[label = "C10" fillcolor="azure3" pos = "0,1!" shape=box]y10;
+	raiz->y10;
+	node[label="*" fillcolor="black" pos="0,-0!" shape=box]i10_10;
+	x10->i10_10;
+	x10->i10_10[dir=back];
+	y10->i10_10;
+	y10->i10_10[dir=back];
+}
