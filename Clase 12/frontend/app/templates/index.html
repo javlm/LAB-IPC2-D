@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">Characters List JL</h1>
+      <p class="lead text-muted">Por favor no me juzguen, no soy otaku :v</p>
+      <p>
+        <a href="#" class="btn btn-dark my-2">Ir a Ultimas Tendencias</a>
+        <a href="#" class="btn btn-secondary my-2">Ver m&aacute;s personajes</a>
+      </p>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        {% for char in characters%}
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow" style="width: 23rem;">
+            <img class="card-img-top" style="width: 23rem; height: 35rem; " src="{{char.image}}" alt="{{char.name}}">
+            <div class="card-body">
+                <h5 class="card-title">{{char.name}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{char.anime}}</h6>
+              <p class="card-text" style="text-align: justify;">{{char.desc}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
+                  <button type="button" class="btn btn-sm btn-dark">Ver más</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endblock content %}
+  
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-right">
+        <a href="{% url 'index' %}">Regresar al tope</a>
+      </p>
+      <p>Ejemplo de Tienda de Productos &copy; Bootstrap.</p>
+      <p>¿Nuevos en Bootstrap? <a href="../../">Visiten la pagina oficial </a> o consulten <a href="../../getting-started/"> la guía de inicio</a>.</p>
+    </div>
+  </footer>
