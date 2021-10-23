@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
     {% if title %}
         <title>Anime Characters - {{title}}</title>
-    {% else %}
+      {% else %}
         <title> Anime Characters </title>
     {% endif %}
 </head>
@@ -29,17 +29,14 @@
             <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'index' %}">About</a>
+            <a class="nav-link" href="{% url 'add' %}">Insertar</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'index' %}">Registrarse</a>
+            <a class="nav-link" href="{% url 'delete' %}">Eliminar</a>
           </li>
-          <!--{% if user %}
           <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">{{user}}</a>
+            <a class="nav-link" href="{% url 'carga' %}">Cargar Archivo</a>
           </li>
-          {% endif %}
-        -->
         </ul>
         <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

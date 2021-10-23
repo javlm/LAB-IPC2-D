@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container py-4">
+    <h1 style="text-align: center;"> Inserta un nuevo personaje </h1>
+  </div>
+  <div class="container py-5">
+  <div class="row">
+      <div class="col">
+        {% if form.errors %}
+        <p style="color: red;"> Por favor, completa todos los campos, todos son necesarios </p>
+        {% endif %}
+          <form action="/add/" method="POST">
+              {% csrf_token %}
+              <div class="mb-3">
+                  <label for="name" class="form-label">Name:</label>
+                  <input type="text" class="form-control" id="id_name" name ="name">
+              </div>
+                <div class="mb-3">
+                  <label for="anime" class="form-label">Anime:</label>
+                  <input type="text" class="form-control" id="id_anime" name ="anime">
+                  </div>
+              <div class="mb-3">
+                <label for="desc" class="form-label">Description:</label>
+                <input type="text" class="form-control" id="id_desc" name ="desc">
+                <div id="DescHelp" class="form-text">Please, insert at least 100 characters</div>.</div>
+              </div>
+              <div class="mb-3">
+                <label for="image" class="form-label">Image link:</label>
+                <input type="text" class="form-control" id="id_image" name="image"> 
+              </div>
+              <button type="submit" class="btn btn-dark btn-lg">Agregar Personaje</button>
+            </form>
+          </div>
+      </div>
+  </div>
+
+{% endblock content %}

@@ -9,6 +9,14 @@ class Manager():
         self.characters.append(nuevo)
         return True
 
+    def delete_character(self, n):
+        for i in self.characters:
+            if i.name == n:
+                tmp = i.getCharacter()
+                self.characters.remove(tmp)
+                return True
+        return False
+
     def get_characters(self):
         json = []
         for k in self.characters:
