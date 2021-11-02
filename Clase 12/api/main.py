@@ -31,7 +31,7 @@ def get_characters():
     c = manager.get_characters()
     return jsonify(c), 200
 
-@app.route('/delete/<string:name>', methods = ['DELETE'])
+@app.route('/delete/<string:name', methods = ['DELETE'])
 def delte_character(name):
     if request.method == 'DELETE':
         if name is not None:
@@ -40,8 +40,7 @@ def delte_character(name):
                 return jsonify({'ok':ok, 'msg':'Personaje eliminado correctamente'}), 200
             else:
                 return jsonify({'ok':ok, 'msg':'No existe el personaje'}), 404
-        return jsonify({'ok': False, 'msg':'No se pudo eliminar el personaje indicado'}), 500
-
+        return jsonify({'ok': False, 'msg':'Solicitu incompleta'}), 500
     return jsonify({'msg':'Metodo no permitido'}), 405
 
 

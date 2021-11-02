@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -114,6 +115,10 @@ USE_L10N = True
 
 USE_TZ = True
 
+#PDF Common Files frontend\app\common\
+#base = os.path.dirname(__file__) 
+#project = os.path.abspath(os.path.dirname(base)) otr forma de obtener BASE_DIR
+PDF_FILES_FOLDER = os.path.join(BASE_DIR, 'app/common/')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
