@@ -10,3 +10,4 @@
 * Strings
 
 ### Grabación
+[Clase 1: 22 de enero de 2022](https://drive.google.com/file/d/14mdIEzdAmrJ0ZbPSL0HKGmHW8PPcs5A6/view?usp=sharing)
