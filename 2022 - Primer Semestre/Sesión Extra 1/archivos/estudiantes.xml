@@ -1,0 +1,31 @@
+<estudiantes>
+    <estudiante nombre="Javier Lima">201612098
+    <cursos>
+        <curso>Modelacion 2</curso>
+        <curso>Software Avanzado</curso>
+        <curso>Inteligencia Artificial</curso>
+    </cursos>
+    </estudiante>
+    <estudiante nombre="Fredy Quijada">202004812
+    <cursos>
+        <curso>Lenguajes</curso>
+        <curso>Deportes</curso>
+        <curso>Practicas Iniciales</curso>
+    </cursos>
+    </estudiante>
+    <estudiante nombre="Marco Solis">202003220
+    <cursos>
+        <curso>Lenguajes</curso>
+        <curso>Deportes</curso>
+        <curso>Practicas Iniciales
+        </curso>
+    </cursos>
+    </estudiante>
+    <estudiante nombre="Karla González">202006688
+    <cursos>
+        <curso>Lenguajes</curso>
+        <curso>Deportes</curso>
+        <curso>Practicas Iniciales</curso>
+    </cursos>
+    </estudiante>
+</estudiantes>
