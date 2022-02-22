@@ -1,0 +1,30 @@
+<estudiantes>
+    <estudiante nombre="Javier Lima">201612098
+    <cursos>
+        <curso cod="720">Modelacion 2</curso>
+        <curso cod="780">Software Avanzado</curso>
+        <curso cod="900">Inteligencia Artificial</curso>
+    </cursos>
+    </estudiante>
+    <estudiante nombre="Fredy Quijada">202004812
+    <cursos>
+        <curso cod="796">Lenguajes</curso>
+        <curso cod="39">Deportes</curso>
+        <curso cod="2025">Practicas Iniciales</curso>
+    </cursos>
+    </estudiante>
+    <estudiante nombre="Marco Solis">202003220
+    <cursos>
+        <curso cod="796">Lenguajes</curso>
+        <curso cod="39">Deportes</curso>
+        <curso cod="2025">Practicas Iniciales</curso>
+    </cursos>
+    </estudiante>
+    <estudiante nombre="Karla González">202006688
+    <cursos>
+        <curso cod="796">Lenguajes</curso>
+        <curso cod="39">Deportes</curso>
+        <curso cod="2025">Practicas Iniciales</curso>
+    </cursos>
+    </estudiante>
+</estudiantes>
