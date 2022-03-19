@@ -86,7 +86,6 @@ class MatrizDispersa():
                     if nueva_celda.coordenadaY < tmp.coordenadaY:
                         nueva_celda.setDerecha(tmp)
                         nueva_celda.setIzquierda(tmp.getIzquierda())
-                        tmp.izquierda.derecha = nueva_celda
                         tmp.getIzquierda().setDerecha(nueva_celda)
                         tmp.setIzquierda(nueva_celda)
                         break;
@@ -128,6 +127,44 @@ class MatrizDispersa():
                         else:
                             tmp2 = tmp2.getAbajo()
         ##------ Fin de insercion
+
+    def recorridoPorFila(self, fila):
+        inicio : Nodo_Cabecera = self.filas.getCabecera(fila)
+        if inicio == None:
+            print('Esa coordenada de filas no existe')
+            return None
+            
+        tmp : Nodo_Celda = inicio.getAcceso()
+        #tmp = self.filas.getCabecera(fila).getAcceso()
+        while tmp != None:
+            print(tmp.caracter)
+            tmp = tmp.getDerecha()
+
+    
+    def recorridoPorColumna(self, columna):
+        inicio : Nodo_Cabecera = self.columnas.getCabecera(columna)
+        if inicio == None:
+            print('Esa coordenada de columna no existe')
+            return None
+
+        tmp : Nodo_Celda = inicio.getAcceso()
+        #tmp = self.filas.getCabecera(fila).getAcceso()
+        while tmp != None:
+            print(tmp.caracter)
+            tmp = tmp.getAbajo()
+
+
+    def ubicarCoordenada(self, fila, columna):
+        try:
+            tmp : Nodo_Celda = self.filas.getCabecera(fila).getAcceso()
+            while tmp != None:
+                if tmp.coordenadaX == fila and tmp.coordenadaY == columna:
+                    return tmp
+                tmp = tmp.getDerecha()
+            return None
+        except:
+            print('Coordenada no encontrada')
+            return None
 
 
     def graficarNeato(self, nombre):
