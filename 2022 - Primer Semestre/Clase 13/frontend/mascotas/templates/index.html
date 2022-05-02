@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Hola Esta es una tienda de mascotas</h2>
+{% for mascota in mascotas %}
+<h3>{{ mascota.nombre }}</h3>
+<p> {{mascota.tipo}}</p>
+{% endfor %}
+{% endblock content %}
+
+
+{% block footer %}
+<h4>Este es el footer</h4>
+{% endblock footer %}
