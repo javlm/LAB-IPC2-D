@@ -11,6 +11,11 @@ manager = Manager()
 def index():
     return "API Python with Flask Framework is working just fine!!!!"
 
+@app.route('/reset', methods=['DELETE'])
+def reset():
+    manager.reset()
+    return jsonify({'msg':'base de datos eliminada o reseteada'}), 200
+
 @app.route('/add', methods = ['POST'])
 def add():
     json = request.get_json()
@@ -24,14 +29,14 @@ def add_various():
     raiz = ET.XML(xml)
     for elemento in raiz:
         manager.add_character(elemento.attrib['name'], elemento.attrib['anime'], elemento.attrib['image'], elemento.text)
-    return jsonify({'ok':True, 'msg':'Archivo XML cargado correctamente :D'}), 200
+    return jsonify({'ok':True, 'salida':'<salida><mensajes> <positivos> 1</positivos></mensajes> </salida>'}), 201
 
 @app.route('/showall', methods=['GET'])
 def get_characters():
     c = manager.get_characters()
     return jsonify(c), 200
 
-@app.route('/delete/<string:name', methods = ['DELETE'])
+@app.route('/delete/<string:name>', methods = ['DELETE'])
 def delte_character(name):
     if request.method == 'DELETE':
         if name is not None:

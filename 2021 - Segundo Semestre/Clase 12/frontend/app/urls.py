@@ -8,4 +8,5 @@ urlpatterns = [
     path('cargar/', views.cargaMasiva, name='carga'),
     path('pdf/', views.pdf_view, name='pdf'),
     path('pdfs/', view=views.pdf_scratch, name='pdfs'),
+    path('reset/', view=views.reset, name='reset'),
 ]

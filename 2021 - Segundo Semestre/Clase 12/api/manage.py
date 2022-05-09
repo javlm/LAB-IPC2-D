@@ -17,6 +17,9 @@ class Manager():
                 return True
         return False
 
+    def reset(self):
+        self.characters = []
+
     def get_characters(self):
         json = []
         for k in self.characters:

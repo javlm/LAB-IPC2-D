@@ -27,9 +27,11 @@ def add(request):
         form = AddForm(request.POST)
         if form.is_valid():
             json_data = form.cleaned_data
+            print(json_data)
             response = requests.post(endpoint + 'add', json=json_data)
             if response.ok:
                 return render(request, 'add.html', {'form':form})
+        print("El formulario no es valido")
         return render(request, 'add.html', {'form':form})
     return render(request, 'add.html')
 
@@ -42,7 +44,19 @@ def delete(request):
     else:
         form = DeleteForm()      
     return render(request, 'delete.html', {'form':form})  
-    
+
+def reset(request):
+    ctx = {
+        'content':None,
+        'response':None
+    }
+    try:
+        respone = requests.delete(endpoint + 'reset') # http://127.0.0.1:4000/reset
+        json_response = respone.json()
+        ctx['content'] = json_response['msg']
+    except:
+        print('API no esta levantada')
+    return render(request, 'carga.html', ctx)
 
 def cargaMasiva(request):
     ctx = {
@@ -50,18 +64,22 @@ def cargaMasiva(request):
         'response':None
     }
     if request.method == 'POST':
+        print("Envie el archivo de entrada", request.method)
         form = FileForm(request.POST, request.FILES)
         if form.is_valid():
             f = request.FILES['file']
+            print("archivo", f)
             xml_binary = f.read()
             xml = xml_binary.decode('utf-8')
             ctx['content'] = xml
             response = requests.post(endpoint + 'addVarious', data=xml_binary)
+            result = response.json()
             if response.ok:
-                ctx['response'] = 'Archivo XML cargado corrrectamente'
+                ctx['response'] = result['salida']
             else:
                 ctx['response'] = 'El archivo se envio, pero hubo un error en el servidor'
     else:
+        print("Estoy renderizando unicamente la plantilla", request.method)
         return render(request, 'carga.html')
     return render(request, 'carga.html', ctx)
 
